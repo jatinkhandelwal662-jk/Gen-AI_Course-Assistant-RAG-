@@ -1,8 +1,8 @@
-langchain
+streamlit
 langchain-core
 langchain-community
-chromadb
 langchain-groq
+langchain-huggingface
+chromadb
 python-dotenv
-langchain_openai
-langchainhub
+sentence-transformers
