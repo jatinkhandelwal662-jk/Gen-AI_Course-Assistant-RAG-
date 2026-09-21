@@ -1,0 +1,71 @@
+Course Name: Master Generative AI & System Architecture
+Author: Jatin
+Platform: Python_Learning
+Last Updated: September 2026
+
+Course Overview:
+This intensive, project-driven course bridges the gap between traditional software engineering and modern AI integration. Designed for developers and engineers, this program focuses on building functional, production-ready web applications and automated system architectures powered by Large Language Models (LLMs). Rather than focusing purely on AI theory, this curriculum emphasizes real-world implementation—teaching you how to design scalable architectures, optimize vector searches, and deploy AI solutions that handle complex logic, hardware integration, and dynamic data retrieval.
+
+Target Audience & Prerequisites:
+
+* Ideal for software engineers, IoT developers, and technical club executives looking to implement AI features at an enterprise scale.
+* Requires a foundational understanding of Data Structures and Algorithms (DSA).
+* Requires basic proficiency in JavaScript or C++ for system integrations and frontend/backend connectivity.
+
+Comprehensive Curriculum:
+
+Module 1: Foundations of LLMs, API Integration, and Token Optimization
+
+* Understanding transformer architectures and the mechanics of LLMs.
+* Setting up API keys, managing rate limits, and handling asynchronous requests.
+* Advanced prompt engineering techniques: Few-shot, Chain-of-Thought (CoT), and ReAct frameworks.
+* Cost management and token optimization strategies for high-volume API calls.
+
+Module 2: Structuring AI Applications with JavaScript and C++
+
+* Integrating AI models into modern JavaScript frameworks (React/Node.js) for seamless user interfaces.
+* Utilizing C++ for handling performance-heavy edge computing and hardware-level AI triggers.
+* Designing robust middleware to securely process user inputs before they reach the LLM.
+* Error handling, fallbacks, and maintaining application stability during API outages.
+
+Module 3: Vector Databases, FAISS, and Retrieval-Augmented Generation (RAG)
+
+* Core concepts of vector embeddings and semantic search.
+* Setting up and querying local vector stores using FAISS and ChromaDB.
+* Advanced text chunking strategies (Recursive Character, Token-based) to maintain semantic context.
+* Building a complete RAG pipeline to allow LLMs to query proprietary datasets without hallucination.
+
+Module 4: System Design for Scalable AI Architectures
+
+* Designing stateless AI microservices for high-traffic environments.
+* Caching strategies for LLM responses to reduce latency and API costs.
+* Load balancing and managing concurrent LLM requests in production.
+* Security protocols: Preventing prompt injection, data sanitization, and protecting user privacy.
+
+Module 5: Capstone Project - Voice-Capable Logistical Application
+
+* End-to-end development of a voice-based generative AI system.
+* Reverse-engineering the architecture of complex civic or healthcare tools.
+* Core deliverable: Build a logistical tool capable of parsing voice inputs to automatically update databases—such as a system designed to help frontline workers manage patient records and track medicine inventory stocks.
+* Deploying the final application on a cloud platform with CI/CD pipelines.
+
+Duration & Format:
+10 Weeks (Self-paced, estimated 5-7 hours per week).
+
+* 40+ hours of on-demand high-definition video lectures.
+* 15 hands-on coding exercises with automated grading.
+* 4 comprehensive architecture teardowns of industry-standard AI applications.
+* Access to a private Discord community for peer programming and networking.
+
+Mentorship & Support:
+Includes bi-weekly live Q&A sessions and dedicated 1-on-1 code reviews from senior industry mentors to provide technical feedback on your capstone project architecture.
+
+Certificate of Completion:
+Yes. A verifiable digital certificate is provided upon successful completion of all modules, coding exercises, and the final capstone project. The certificate includes a unique credential ID, a detailed transcript of skills acquired, and a direct link to your deployed capstone project to enhance your professional portfolio.
+
+Pricing Structure & Policies:
+
+* Trial Phase: 100% Free for the first 14 days. This grants complete access to Module 1 and Module 2, allowing you to set up your local development environment, test live API calls, and build your first basic RAG pipeline before committing.
+* Premium Access: After the 14-day trial expires, a one-time payment of ₹3,999 (or local equivalent) is required.
+* What Premium Unlocks: Modules 3, 4, and 5, the capstone project specifications, downloadable source code repositories, 1-on-1 mentorship access, and the final certification.
+* Refund Policy: 7-day money-back guarantee after the premium upgrade if you are not satisfied with the course material.
