@@ -1,6 +1,9 @@
 import os
+from pathlib import Path
+
 import streamlit as st
 from dotenv import load_dotenv
+from streamlit.errors import StreamlitSecretNotFoundError
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -18,11 +21,22 @@ st.set_page_config(page_title="Course Q&A Assistant", page_icon="🤖")
 st.title("📚GenAI Course Assistant")
 st.write("Ask anything about the Master Generative AI & System Architecture course.")
 
+groq_api_key = os.getenv("GROQ_API_KEY")
+if not groq_api_key:
+    try:
+        groq_api_key = st.secrets["GROQ_API_KEY"]
+    except (KeyError, StreamlitSecretNotFoundError):
+        groq_api_key = None
+
+if not groq_api_key:
+    st.error("Add GROQ_API_KEY to the app's Streamlit Cloud secrets.")
+    st.stop()
+
 # 2. Initialize and Cache the RAG Pipeline
 @st.cache_resource
-def build_rag_pipeline():
-    # Note: Using the exact path relative to main.py
-    loader = TextLoader("data/genai_course.txt", encoding="utf-8")
+def build_rag_pipeline(api_key: str):
+    course_file = Path(__file__).parent / "data" / "genai_course.txt"
+    loader = TextLoader(str(course_file), encoding="utf-8")
     docs = loader.load()
     
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
@@ -37,7 +51,7 @@ def build_rag_pipeline():
         
     retriever = vectorstore.as_retriever()
     
-    llm = ChatGroq(model_name="openai/gpt-oss-20b")
+    llm = ChatGroq(model_name="openai/gpt-oss-20b", api_key=api_key)
     
     template = """You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.
     
@@ -59,7 +73,7 @@ def build_rag_pipeline():
     return rag_chain
 
 # Load the pipeline into memory once
-rag_chain = build_rag_pipeline()
+rag_chain = build_rag_pipeline(groq_api_key)
 
 # 3. User Interface for Querying
 user_question = st.text_input("Enter your question:")
